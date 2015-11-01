@@ -1,0 +1,23 @@
+{
+  "name": "gulp-qunba-inline",
+  "version": "0.0.1",
+  "description": "qunba inline plugin for gulp",
+  "author": {
+    "name": "jagus",
+    "email": "jagus.ou@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghjagus/gulp-qunba-inline.git"
+  },
+  "keywords": [
+    "gulp",
+    "plugin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {}
+}
