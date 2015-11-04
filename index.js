@@ -26,7 +26,7 @@ module.exports = function(options) {
             content = content.replace(/<(script).*?src=(["'])([^>]*?)\?__inline\2><\/\1>/gmi, function(match, g1, g2, src, index, input) {
                 if (/template/.test(src)) {
                     // 模板文件就不inline了，已经放到dev/js/template
-                    return src;
+                    return match;
                 }
                 return ['<script>',
                     fs.readFileSync('src/'+src).toString('utf8'),
