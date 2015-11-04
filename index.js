@@ -23,7 +23,7 @@ module.exports = function(options) {
             var content = file.contents.toString('utf8');
 
             // 暂时只支持inline js
-            content = content.replace(/<script\s+src=["|'](.*?)\?__inline["|']>\s?<\/script>/gi, function(match, src, index, input) {
+            content = content.replace(/<(script).*?src=(["'])([^>]*?)\?__inline\2><\/\1>/gmi, function(match, g1, g2, src, index, input) {
                 if (/template/.test(src)) {
                     // 模板文件就不inline了，已经放到dev/js/template
                     return src;
